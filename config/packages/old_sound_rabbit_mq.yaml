@@ -36,3 +36,19 @@ old_sound_rabbit_mq:
             <<: *consistentHash
             queue_options: { name: 'old_sound_rabbit_mq.consumer.consistent_hash3', routing_key: '32' }
             callback: App\Controller\Amqp\ConsistentHash\Consumer3
+        consistent_hash4:
+            <<: *consistentHash
+            queue_options: { name: 'old_sound_rabbit_mq.consumer.consistent_hash4', routing_key: '32' }
+            callback: App\Controller\Amqp\ConsistentHash\Consumer4
+        consistent_hash5:
+            <<: *consistentHash
+            queue_options: { name: 'old_sound_rabbit_mq.consumer.consistent_hash5', routing_key: '32' }
+            callback: App\Controller\Amqp\ConsistentHash\Consumer5
+        consistent_hash6:
+            <<: *consistentHash
+            queue_options: { name: 'old_sound_rabbit_mq.consumer.consistent_hash6', routing_key: '32' }
+            callback: App\Controller\Amqp\ConsistentHash\Consumer6
+        consistent_hash7:
+            <<: *consistentHash
+            queue_options: { name: 'old_sound_rabbit_mq.consumer.consistent_hash7', routing_key: '32' }
+            callback: App\Controller\Amqp\ConsistentHash\Consumer7

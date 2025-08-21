@@ -56,3 +56,23 @@ services:
         class: App\Controller\Amqp\ConsistentHash\Consumer
         arguments:
             $consumerId: 3
+
+    App\Controller\Amqp\ConsistentHash\Consumer4:
+        class: App\Controller\Amqp\ConsistentHash\Consumer
+        arguments:
+            $consumerId: 4
+
+    App\Controller\Amqp\ConsistentHash\Consumer5:
+        class: App\Controller\Amqp\ConsistentHash\Consumer
+        arguments:
+            $consumerId: 5
+
+    App\Controller\Amqp\ConsistentHash\Consumer6:
+        class: App\Controller\Amqp\ConsistentHash\Consumer
+        arguments:
+            $consumerId: 6
+
+    App\Controller\Amqp\ConsistentHash\Consumer7:
+        class: App\Controller\Amqp\ConsistentHash\Consumer
+        arguments:
+            $consumerId: 7

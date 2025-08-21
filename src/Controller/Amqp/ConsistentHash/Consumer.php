@@ -4,6 +4,7 @@ namespace App\Controller\Amqp\ConsistentHash;
 
 use App\Controller\Amqp\AbstractConsumer;
 use App\Service\ConsumeMessageService;
+use RuntimeException;
 
 class Consumer extends AbstractConsumer
 {
@@ -22,7 +23,11 @@ class Consumer extends AbstractConsumer
      */
     protected function handle($message): int
     {
-        $this->messageService->processMessage($message, $this->consumerId);
+        try {
+            $this->messageService->processMessage($message, $this->consumerId);
+        } catch (RuntimeException) {
+            return self::MSG_REJECT_REQUEUE;
+        }
 
         return self::MSG_ACK;
     }
